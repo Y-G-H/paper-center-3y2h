@@ -30,7 +30,7 @@
     mvn deploy
     -->
 
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.3-SNAPSHOT</version>
     <name>paper</name>
     <description>3y2h blog system paper center</description>
 
@@ -93,6 +93,12 @@
             <groupId>cn.y3h2.blog.user</groupId>
             <artifactId>api</artifactId>
             <version>${user.center.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>3.0.3</version>
         </dependency>
     </dependencies>
 

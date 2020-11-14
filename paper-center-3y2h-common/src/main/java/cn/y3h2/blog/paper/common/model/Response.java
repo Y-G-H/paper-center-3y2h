@@ -1,6 +1,6 @@
 package cn.y3h2.blog.paper.common.model;
 
-import cn.y3h2.blog.user.common.enums.MessageEnums;
+import cn.y3h2.blog.paper.common.enums.MessageEnums;
 import lombok.Data;
 import lombok.ToString;
 

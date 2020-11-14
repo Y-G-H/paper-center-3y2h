@@ -10,5 +10,7 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://code.alibabatech.com/schema/dubbo
         http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
-		 
+
+    <dubbo:service interface="cn.y3h2.blog.paper.api.SueNoticeFacade" version="1.0.0"
+                   ref="sueNoticeService" retries="0" timeout="5000"/>
 </beans>
