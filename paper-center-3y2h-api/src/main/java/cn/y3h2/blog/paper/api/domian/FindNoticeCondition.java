@@ -7,12 +7,12 @@ import java.io.Serializable;
 /**
  * @author ：yzh
  * @date ：Created in 2020/11/14 17:03
- * @ClassName : FindNoticeCoding
+ * @ClassName : FindNoticeCondition
  * @Description : 查询公告列表
  */
 
 @Data
-public class FindNoticeCoding implements Serializable {
+public class FindNoticeCondition implements Serializable {
 
     private static final long serialVersionUID = -5176360240884276899L;
 

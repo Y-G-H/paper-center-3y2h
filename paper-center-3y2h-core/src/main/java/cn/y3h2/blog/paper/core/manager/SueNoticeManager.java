@@ -1,6 +1,6 @@
 package cn.y3h2.blog.paper.core.manager;
 
-import cn.y3h2.blog.paper.api.domian.FindNoticeCoding;
+import cn.y3h2.blog.paper.api.domian.FindNoticeCondition;
 import cn.y3h2.blog.paper.common.enums.MessageEnums;
 import cn.y3h2.blog.paper.common.excaption.ExceptionFactory;
 import cn.y3h2.blog.paper.core.domain.SueNoticeDO;
@@ -24,16 +24,16 @@ public class SueNoticeManager {
     @Autowired
     private SueNoticeMapper sueNoticeMapper;
 
-    public List<SueNoticeDO> findNotice(FindNoticeCoding coding) {
+    public List<SueNoticeDO> findNotice(FindNoticeCondition condition) {
         try{
             LambdaQueryWrapper<SueNoticeDO> lambdaQueryWrapper = new LambdaQueryWrapper<>();
-            if (Objects.nonNull(coding.getId())) lambdaQueryWrapper.eq(SueNoticeDO::getId, coding.getId());
-            if (Objects.nonNull(coding.getTitle())) lambdaQueryWrapper.eq(SueNoticeDO::getTitle, coding.getTitle());
-            if (Objects.nonNull(coding.getContent())) lambdaQueryWrapper.eq(SueNoticeDO::getContent, coding.getContent());
-            if (Objects.nonNull(coding.getLevel())) lambdaQueryWrapper.eq(SueNoticeDO::getLevel, coding.getLevel());
-            if (Objects.nonNull(coding.getType())) lambdaQueryWrapper.eq(SueNoticeDO::getType, coding.getType());
-            if (Objects.nonNull(coding.getTo_user())) lambdaQueryWrapper.eq(SueNoticeDO::getTo_user, coding.getTo_user());
-            if (Objects.nonNull(coding.getState())) lambdaQueryWrapper.eq(SueNoticeDO::getState, coding.getState());
+            if (Objects.nonNull(condition.getId())) lambdaQueryWrapper.eq(SueNoticeDO::getId, condition.getId());
+            if (Objects.nonNull(condition.getTitle())) lambdaQueryWrapper.eq(SueNoticeDO::getTitle, condition.getTitle());
+            if (Objects.nonNull(condition.getContent())) lambdaQueryWrapper.eq(SueNoticeDO::getContent, condition.getContent());
+            if (Objects.nonNull(condition.getLevel())) lambdaQueryWrapper.eq(SueNoticeDO::getLevel, condition.getLevel());
+            if (Objects.nonNull(condition.getType())) lambdaQueryWrapper.eq(SueNoticeDO::getType, condition.getType());
+            if (Objects.nonNull(condition.getTo_user())) lambdaQueryWrapper.eq(SueNoticeDO::getTo_user, condition.getTo_user());
+            if (Objects.nonNull(condition.getState())) lambdaQueryWrapper.eq(SueNoticeDO::getState, condition.getState());
 
             List<SueNoticeDO> sueNoticeDOS = sueNoticeMapper.selectList(lambdaQueryWrapper);
             return sueNoticeDOS;
