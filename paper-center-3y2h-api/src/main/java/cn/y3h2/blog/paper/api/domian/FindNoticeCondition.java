@@ -39,12 +39,12 @@ public class FindNoticeCondition implements Serializable {
     /**
      * 发送用户
      */
-    private Integer type;
+    private Long fromUser;
 
     /**
      * 接收用户
      */
-    private Integer to_user;
+    private Long toUser;
 
     /**
      * 公告状态

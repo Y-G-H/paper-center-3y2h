@@ -31,8 +31,8 @@ public class SueNoticeManager {
             if (Objects.nonNull(condition.getTitle())) lambdaQueryWrapper.eq(SueNoticeDO::getTitle, condition.getTitle());
             if (Objects.nonNull(condition.getContent())) lambdaQueryWrapper.eq(SueNoticeDO::getContent, condition.getContent());
             if (Objects.nonNull(condition.getLevel())) lambdaQueryWrapper.eq(SueNoticeDO::getLevel, condition.getLevel());
-            if (Objects.nonNull(condition.getType())) lambdaQueryWrapper.eq(SueNoticeDO::getType, condition.getType());
-            if (Objects.nonNull(condition.getTo_user())) lambdaQueryWrapper.eq(SueNoticeDO::getTo_user, condition.getTo_user());
+            if (Objects.nonNull(condition.getFromUser())) lambdaQueryWrapper.eq(SueNoticeDO::getFromUser, condition.getFromUser());
+            if (Objects.nonNull(condition.getToUser())) lambdaQueryWrapper.eq(SueNoticeDO::getToUser, condition.getToUser());
             if (Objects.nonNull(condition.getState())) lambdaQueryWrapper.eq(SueNoticeDO::getState, condition.getState());
 
             List<SueNoticeDO> sueNoticeDOS = sueNoticeMapper.selectList(lambdaQueryWrapper);
