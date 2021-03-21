@@ -11,7 +11,7 @@ import java.io.Serializable;
  */
 
 @Data
-public class SueNoticeDto implements Serializable {
+public class SueNoticeDTO implements Serializable {
 
     private static final long serialVersionUID = 1407201752359618325L;
 
@@ -32,21 +32,23 @@ public class SueNoticeDto implements Serializable {
 
     /**
      * 公告类型
+     * @see cn.y3h2.blog.paper.common.enums.NoticeLevelEnums
      */
     private Integer level;
 
     /**
      * 发送用户
      */
-    private Integer type;
+    private Long fromUser;
 
     /**
      * 接收用户
      */
-    private Integer to_user;
+    private Long toUser;
 
     /**
      * 公告状态
+     * @see cn.y3h2.blog.paper.common.enums.NoticeStateEnums
      */
     private Integer state;
 }

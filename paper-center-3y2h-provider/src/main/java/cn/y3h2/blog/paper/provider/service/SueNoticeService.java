@@ -2,7 +2,7 @@ package cn.y3h2.blog.paper.provider.service;
 
 import cn.y3h2.blog.paper.api.SueNoticeFacade;
 import cn.y3h2.blog.paper.api.domian.FindNoticeCondition;
-import cn.y3h2.blog.paper.common.dto.SueNoticeDto;
+import cn.y3h2.blog.paper.common.dto.SueNoticeDTO;
 import cn.y3h2.blog.paper.common.model.Response;
 import cn.y3h2.blog.paper.provider.helper.ConverterHelper;
 import cn.y3h2.blog.paper.core.domain.SueNoticeDO;
@@ -29,9 +29,9 @@ public class SueNoticeService implements SueNoticeFacade {
     private SueNoticeManager sueNoticeManager;
 
     @Override
-    public Response<List<SueNoticeDto>> findSueNotice(FindNoticeCondition condition) {
+    public Response<List<SueNoticeDTO>> findSueNotice(FindNoticeCondition condition) {
         List<SueNoticeDO> notices = sueNoticeManager.findNotice(condition);
-        List<SueNoticeDto> sueNoticeDtos = notices.stream().map(ConverterHelper::toSueNoticeDTO).collect(Collectors.toList());
+        List<SueNoticeDTO> sueNoticeDtos = notices.stream().map(ConverterHelper::toSueNoticeDTO).collect(Collectors.toList());
         return Response.ok(sueNoticeDtos);
     }
 }

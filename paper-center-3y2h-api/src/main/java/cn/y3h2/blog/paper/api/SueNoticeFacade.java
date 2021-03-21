@@ -1,7 +1,7 @@
 package cn.y3h2.blog.paper.api;
 
 import cn.y3h2.blog.paper.api.domian.FindNoticeCondition;
-import cn.y3h2.blog.paper.common.dto.SueNoticeDto;
+import cn.y3h2.blog.paper.common.dto.SueNoticeDTO;
 import cn.y3h2.blog.paper.common.model.Response;
 
 import java.util.List;
@@ -19,5 +19,5 @@ public interface SueNoticeFacade {
      * @param condition 查询条件
      * @return
      */
-    Response<List<SueNoticeDto>> findSueNotice(FindNoticeCondition condition);
+    Response<List<SueNoticeDTO>> findSueNotice(FindNoticeCondition condition);
 }
